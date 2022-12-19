@@ -47,9 +47,9 @@ jobs:
               run: dotnet pack --configuration ${{ env.BUILD_CONFIGURATION }}
 
             - name: Push to feedz.io
-              run: dotnet nuget push **/*.nupkg -k ${{ secrets.FEEDZ_API_KEY }} -s ${{ env.FEEDZ_SOURCE }}
+              run: dotnet nuget push **/*.nupkg -k ${{ secrets.FEEDZ_API_KEY }} -s ${{ env.FEEDZ_SOURCE }} --skip-duplicate
               if: github.event_name == 'pull_request'
 
             - name: Push to NuGet.org
-              run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+              run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json --skip-duplicate
               if: github.event_name == 'push'
