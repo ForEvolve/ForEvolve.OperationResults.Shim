@@ -1,0 +1,55 @@
+name: Build, Test, and Deploy master to feedz.io
+
+on:
+    push:
+        branches:
+            - master
+        paths-ignore:
+            - 'samples/**'
+
+    pull_request:
+        branches:
+            - master
+
+env:
+    BUILD_CONFIGURATION: Release
+    PUBLIC_RELEASE: true
+    FEEDZ_SOURCE: https://f.feedz.io/forevolve/toolbox/nuget/index.json
+
+jobs:
+    build-and-pack:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v1
+
+            - name: Setup .NET Core 5.0.408
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: '5.0.408'
+
+            - name: Setup .NET Core 6.0.404
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: '6.0.404'
+
+            - name: Setup .NET Core 7.0.101
+              uses: actions/setup-dotnet@v1
+              with:
+                  dotnet-version: '7.0.101'
+
+            - uses: aarnott/nbgv@v0.3
+              with:
+                  setAllVars: true
+                  PublicRelease: ${{ env.PUBLIC_RELEASE }}
+
+            - name: Pack
+              run: dotnet pack --configuration ${{ env.BUILD_CONFIGURATION }}
+
+            - name: Push to feedz.io
+              run: dotnet nuget push **/*.nupkg -k ${{ secrets.FEEDZ_API_KEY }} -s ${{ env.FEEDZ_SOURCE }}
+              if: github.event_name == 'pull_request'
+
+            - name: Push to NuGet.org
+              run: dotnet nuget push **/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json
+              if: github.event_name == 'push'
