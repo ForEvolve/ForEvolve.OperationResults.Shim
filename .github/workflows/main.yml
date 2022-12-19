@@ -11,7 +11,6 @@ on:
 
 env:
     BUILD_CONFIGURATION: Release
-    PUBLIC_RELEASE: true
     FEEDZ_SOURCE: https://f.feedz.io/forevolve/toolbox/nuget/index.json
 
 jobs:
@@ -41,7 +40,6 @@ jobs:
             - uses: dotnet/nbgv@master
               with:
                   setAllVars: true
-                  PublicRelease: ${{ env.PUBLIC_RELEASE }}
 
             - name: Pack
               run: dotnet pack --configuration ${{ env.BUILD_CONFIGURATION }}
