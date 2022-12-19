@@ -5,19 +5,14 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{44DA0645-5A02-4576-A2A6-E8ED03D3B0D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.AspNetCore", "src\ForEvolve.AspNetCore\ForEvolve.AspNetCore.csproj", "{1706F48D-98B0-493D-A0CF-AD58BDB9AEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.AspNetCore", "src\ForEvolve.AspNetCore\ForEvolve.AspNetCore.csproj", "{1706F48D-98B0-493D-A0CF-AD58BDB9AEA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.Contracts", "src\ForEvolve.Contracts\ForEvolve.Contracts.csproj", "{C7D4321B-C1FB-4DCA-B20D-679A976E752B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.Core", "src\ForEvolve.Core\ForEvolve.Core.csproj", "{CBFA2845-D7A4-4262-AB11-996C9E89991E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.Contracts", "src\ForEvolve.Contracts\ForEvolve.Contracts.csproj", "{C7D4321B-C1FB-4DCA-B20D-679A976E752B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{1706F48D-98B0-493D-A0CF-AD58BDB9AEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -28,14 +23,12 @@ Global
 		{C7D4321B-C1FB-4DCA-B20D-679A976E752B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7D4321B-C1FB-4DCA-B20D-679A976E752B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7D4321B-C1FB-4DCA-B20D-679A976E752B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBFA2845-D7A4-4262-AB11-996C9E89991E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBFA2845-D7A4-4262-AB11-996C9E89991E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBFA2845-D7A4-4262-AB11-996C9E89991E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBFA2845-D7A4-4262-AB11-996C9E89991E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{1706F48D-98B0-493D-A0CF-AD58BDB9AEA6} = {44DA0645-5A02-4576-A2A6-E8ED03D3B0D3}
 		{C7D4321B-C1FB-4DCA-B20D-679A976E752B} = {44DA0645-5A02-4576-A2A6-E8ED03D3B0D3}
-		{CBFA2845-D7A4-4262-AB11-996C9E89991E} = {44DA0645-5A02-4576-A2A6-E8ED03D3B0D3}
 	EndGlobalSection
 EndGlobal

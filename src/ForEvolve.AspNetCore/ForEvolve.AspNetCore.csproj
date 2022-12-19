@@ -14,6 +14,5 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ForEvolve.Contracts\ForEvolve.Contracts.csproj" />
-    <ProjectReference Include="..\ForEvolve.Core\ForEvolve.Core.csproj" />
   </ItemGroup>
 </Project>
