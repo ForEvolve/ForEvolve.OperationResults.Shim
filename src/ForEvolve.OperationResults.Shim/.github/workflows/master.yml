@@ -1,15 +1,13 @@
-name: Build, Test, and Deploy master to feedz.io
+name: Build and Deploy
 
 on:
     push:
         branches:
-            - master
-        paths-ignore:
-            - 'samples/**'
+            - main
 
     pull_request:
         branches:
-            - master
+            - main
 
 env:
     BUILD_CONFIGURATION: Release
