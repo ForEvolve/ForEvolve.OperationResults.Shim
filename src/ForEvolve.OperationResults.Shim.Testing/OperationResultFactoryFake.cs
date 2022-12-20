@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace ForEvolve.OperationResults
+namespace ForEvolve.AspNetCore
 {
     public class OperationResultFactoryFake : IOperationResultFactory
     {

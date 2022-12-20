@@ -3,7 +3,7 @@ using ForEvolve.Contracts.Errors;
 using Microsoft.AspNetCore.Identity;
 using Moq;
 
-namespace ForEvolve.OperationResults
+namespace ForEvolve.AspNetCore
 {
     public class OperationResultHelper
     {
