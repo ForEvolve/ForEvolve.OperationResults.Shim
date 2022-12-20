@@ -1,11 +1,7 @@
 ﻿using ForEvolve.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-#if NET5_0
-using Microsoft.Extensions.Hosting.Internal;
-#else
-using Microsoft.AspNetCore.Hosting.Internal;
-#endif
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 
 namespace ForEvolve.AspNetCore
 {
@@ -38,6 +34,16 @@ namespace ForEvolve.AspNetCore
         public IOperationResult<TResult> Create<TResult>(TResult result)
         {
             return Instance.Create(result);
+        }
+
+        private class HostingEnvironment : IHostingEnvironment
+        {
+            public string EnvironmentName { get; set; }
+            public string ApplicationName { get; set; }
+            public string WebRootPath { get; set; }
+            public IFileProvider WebRootFileProvider { get; set; }
+            public string ContentRootPath { get; set; }
+            public IFileProvider ContentRootFileProvider { get; set; }
         }
     }
 }
