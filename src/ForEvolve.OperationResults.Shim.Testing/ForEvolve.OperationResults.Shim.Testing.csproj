@@ -1,13 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-	<TargetFrameworks>net5.0;net6.0;net7.0;netstandard2.0</TargetFrameworks>
-	<ImplicitUsings>enable</ImplicitUsings>
-	<!--<Nullable>enable</Nullable>-->
-	  <LangVersion>latest</LangVersion>
-	<RootNamespace>ForEvolve</RootNamespace>
-  </PropertyGroup>
-	
+	<PropertyGroup>
+		<TargetFrameworks>net5.0</TargetFrameworks>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<!--<Nullable>enable</Nullable>-->
+		<LangVersion>latest</LangVersion>
+		<RootNamespace>ForEvolve</RootNamespace>
+	</PropertyGroup>
+
 	<PropertyGroup>
 		<Product>ForEvolve OperationResults Shim Testing</Product>
 		<Description>Implement old test helpers. Help migrate projects.</Description>
@@ -16,7 +16,7 @@
 		<RepositoryType>git</RepositoryType>
 		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
 	</PropertyGroup>
-	
+
 	<PropertyGroup>
 		<IsPackable>True</IsPackable>
 		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
@@ -49,6 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\ForEvolve.OperationResults.Shim\ForEvolve.OperationResults.Shim.csproj" />
+		<ProjectReference Include="..\ForEvolve.OperationResults.Shim\ForEvolve.OperationResults.Shim.csproj" />
 	</ItemGroup>
 </Project>
