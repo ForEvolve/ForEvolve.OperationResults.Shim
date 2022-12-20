@@ -1,9 +1,9 @@
 ﻿using ForEvolve.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-#if NETSTANDARD2_0
-using Microsoft.AspNetCore.Hosting.Internal;
-#else
+#if NET5_0
 using Microsoft.Extensions.Hosting.Internal;
+#else
+using Microsoft.AspNetCore.Hosting.Internal;
 #endif
 using Microsoft.Extensions.DependencyInjection;
 
