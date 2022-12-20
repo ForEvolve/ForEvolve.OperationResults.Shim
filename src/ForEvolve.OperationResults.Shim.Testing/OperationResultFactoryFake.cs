@@ -1,6 +1,6 @@
 ﻿using ForEvolve.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Hosting.Internal;
+using Microsoft.Extensions.Hosting.Internal;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace ForEvolve.AspNetCore
