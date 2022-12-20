@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{92823632-A74
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForEvolve.OperationResults.Shim", "src\ForEvolve.OperationResults.Shim\ForEvolve.OperationResults.Shim.csproj", "{87B3A843-5096-424F-B28A-B5D804A91ACC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForEvolve.OperationResults.Shim.Testing", "src\ForEvolve.OperationResults.Shim.Testing\ForEvolve.OperationResults.Shim.Testing.csproj", "{B072F8A2-6059-457F-B4E1-84B2035E6187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,11 +19,16 @@ Global
 		{87B3A843-5096-424F-B28A-B5D804A91ACC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87B3A843-5096-424F-B28A-B5D804A91ACC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87B3A843-5096-424F-B28A-B5D804A91ACC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B072F8A2-6059-457F-B4E1-84B2035E6187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B072F8A2-6059-457F-B4E1-84B2035E6187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B072F8A2-6059-457F-B4E1-84B2035E6187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B072F8A2-6059-457F-B4E1-84B2035E6187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{87B3A843-5096-424F-B28A-B5D804A91ACC} = {92823632-A746-4886-8162-3B1891A7A407}
+		{B072F8A2-6059-457F-B4E1-84B2035E6187} = {92823632-A746-4886-8162-3B1891A7A407}
 	EndGlobalSection
 EndGlobal

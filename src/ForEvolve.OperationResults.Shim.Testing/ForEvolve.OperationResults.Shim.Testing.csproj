@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	<TargetFrameworks>net5.0;net6.0;net7.0;netstandard2.0</TargetFrameworks>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<!--<Nullable>enable</Nullable>-->
+	  <LangVersion>latest</LangVersion>
+	<RootNamespace>ForEvolve</RootNamespace>
+  </PropertyGroup>
+	
+	<PropertyGroup>
+		<Product>ForEvolve OperationResults Shim Testing</Product>
+		<Description>Implement old test helpers. Help migrate projects.</Description>
+		<PackageTags>forevolve,aspnetcore,operation result,shim,testing,xunit</PackageTags>
+		<RepositoryUrl>https://github.com/ForEvolve/ForEvolve.OperationResults.Shim</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+	</PropertyGroup>
+	
+	<PropertyGroup>
+		<IsPackable>True</IsPackable>
+		<GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+		<Authors>Carl-Hugo Marcotte</Authors>
+		<Company>ForEvolve</Company>
+		<PackageProjectUrl>https://github.com/ForEvolve/ForEvolve.OperationResults.Shim</PackageProjectUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.0</Version>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Copyright>Carl-Hugo Marcotte</Copyright>
+		<IncludeSymbols>True</IncludeSymbols>
+		<IncludeSource>True</IncludeSource>
+		<DebugType>Full</DebugType>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Moq" Version="4.18.3" />
+		<PackageReference Include="Nerdbank.GitVersioning" Version="3.5.119">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+		<PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\ForEvolve.OperationResults.Shim\ForEvolve.OperationResults.Shim.csproj" />
+	</ItemGroup>
+</Project>
